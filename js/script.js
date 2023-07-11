@@ -1,5 +1,6 @@
 "use strict";
 
+//Guess number game
 const mainDiv = document.getElementById("mainDiv")
 
 const condition = document.createElement("span")
@@ -23,7 +24,6 @@ count.innerHTML="Count: " + 20
 record.innerHTML="Record: "
 
 
-
 mainDiv.appendChild(again)
 mainDiv.appendChild(condition)
 mainDiv.appendChild(guessWordTitle)
@@ -33,8 +33,6 @@ mainDiv.appendChild(record)
 mainDiv.appendChild(beginGuessTitle)
 beginGuessTitle.appendChild(beginGuess)
 beginGuessTitle.appendChild(check)
-
-
 
 
 let random = Math.floor(Math.random()*20)
@@ -60,11 +58,13 @@ check.addEventListener("click", ()=>{
               score--
               count.textContent= "Count: "+ score
               console.log(score)
+              //document.querySelector("input").value=""
             }else if(random<inp){
               guessWord.innerHTML="Your digit so big"
               score--
               count.textContent= "Count: "+ score
               console.log(score)
+              //document.querySelector("input").value=""
             }
      } else{
       console.log(score)
@@ -84,12 +84,12 @@ check.addEventListener("click", ()=>{
   })
 
 
-
 again.style.cssText = `
   border-radius: 10px;
   padding: 10px;
-  margin: 30px 0px 50px 10px;
+  margin: 40px 0px 40px 80px;
   font-size: 30px;
+  box-shadow: 6px 6px black;
 `
 condition.style.cssText=`
   font-size: 20px;
@@ -110,6 +110,7 @@ guessWord.style.cssText=`
   margin: 20px;
   background-color: white;
   text-align:center;
+  padding-top: 20px
 `
 count.style.cssText=`
   position: absolute;
@@ -126,24 +127,29 @@ record.style.cssText=`
   margin-bottom: 60px;
 `
 beginGuessTitle.style.cssText=`
+  font-size: 30px;
   height: 150px;
   width: 150px;
-  display: block;
+  
   bottom: 60px;
-  left: 16px;
+  margin: 0px 0px 40px 60px;
 `
 beginGuess.style.cssText=`
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 150px;
   border: 5px solid blue;
   border-radius: 10px;
   margin: 20px;
   font-size: 40px;
+  text-align: center;
 `
 check.style.cssText=`
   font-size: 40px;
-  border: 5px solid blue;
-  border-radius: 10px;
+  box-shadow: 6px 6px black;
+  border-radius: 1rem;
   margin: 20px;
   padding: 10px
 `
+
+
+
