@@ -13,6 +13,7 @@ const beginGuess = document.createElement("input")
 
 const again = document.createElement("button")
 const check = document.createElement("button")
+const audio = new Audio("Mountain Audio - Menu Click.mp3")
 
 again.innerHTML = "Again!"
 guessWordTitle.innerHTML="Guess number"
@@ -38,7 +39,7 @@ beginGuessTitle.appendChild(check)
 let random = Math.floor(Math.random()*20)
 let score = 20
 check.addEventListener("click", ()=>{
-
+      audio.play()
       console.log(random);
       const inp=Number(document.querySelector("input").value)
       console.log(inp);
